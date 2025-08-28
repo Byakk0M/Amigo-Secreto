@@ -26,3 +26,13 @@ function actualizarLista() {
         lista.appendChild(nuevoElementoLista);
     }
 }
+
+function sortearAmigoSecreto() {
+    if (amigos.length < 2) {
+        alert("Necesitas al menos dos amigos para el sorteo.");
+    } else {
+        let indiceRandom = Math.floor(Math.random() * amigos.length);
+        let amigoSecreto = amigos[indiceRandom];
+        document.getElementById("resultado").innerText = `Tu amigo secreto es: ${amigoSecreto}`;
+    }
+}
